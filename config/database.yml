@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: apollo_production
   username: apollo
   password: <%= ENV["APOLLO_DATABASE_PASSWORD"] %>
