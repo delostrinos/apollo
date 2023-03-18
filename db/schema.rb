@@ -17,8 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_001633) do
   create_table "budgets", force: :cascade do |t|
     t.datetime "start_date", precision: nil, null: false
     t.datetime "end_date", precision: nil, null: false
-    t.bigint "net_income_goal", default: 0, null: false
-    t.bigint "net_income_actual", default: 0, null: false
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
