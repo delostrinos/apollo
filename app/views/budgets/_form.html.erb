@@ -10,19 +10,25 @@
       </ul>
     </div>
   <% end %>
-
+  <br>
   <div>
-    <%= form.label :start_date %> <span>*</span>
-    <p>The name of the title of the project</p>
-    <%= form.text_field :start_date, placeholder: "Start date", datepicker: true, "datepicker-format": "dd MM yyyy"%>
+    <%= form.label :start_date %>
+    <p>The first day of your budget</p>
+    <%= form.text_field :start_date, placeholder: "#{Date.today}", datepicker: true, "datepicker-format": "dd MM yyyy"%>
   </div>
-
+  <br>
   <div>
-    <%= form.label :end_date %> <span>*</span>
-    <p>The name of the title of the project</p>
-    <%= form.text_field :end_date, placeholder: "End date", datepicker: true, "datepicker-format": "dd MM yyyy"%>
+    <%= form.label :end_date %>
+    <p>The last day of your budget</p>
+    <%= form.text_field :end_date, placeholder: "#{Date.today + 30}", datepicker: true, "datepicker-format": "dd MM yyyy"%>
   </div>
-
+  <br>
+  <div>
+    <%= form.label :net_income_goal %>
+    <p>The target savings amount</p>
+    <%= form.text_field :net_income_goal, placeholder: "Test", datepicker: true, "datepicker-format": "dd MM yyyy"%>
+  </div>
+  <br>
   <div>
     <%= form.submit %>
   </div>

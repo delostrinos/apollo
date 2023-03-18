@@ -1,12 +1,11 @@
+<h1>Hello <%= @first_name %></h1>
+<h3>Bellow are a list of your budgets</h3>
 <p style="color: green"><%= notice %></p>
-
-<h1>Budgets</h1>
 
 <div id="budgets">
   <% @budgets.each do |budget| %>
-    <%= render budget %>
     <p>
-      <%= link_to "Show this budget", budget %>
+      <%= link_to "Budget Start Date: #{budget.start_date}", budget %>
     </p>
   <% end %>
 </div>

@@ -3,6 +3,7 @@ class BudgetsController < ApplicationController
 
   # GET /budgets or /budgets.json
   def index
+    @first_name = first_name
     @budgets = Budget.all
   end
 
@@ -65,6 +66,6 @@ class BudgetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def budget_params
-      params.require(:budget).permit(:start_date, :end_date)
+      params.require(:budget).permit(:start_date, :end_date, :net_income_goal)
     end
 end
